@@ -1,4 +1,4 @@
-package org.example.springbatchjpa;
+package org.example.springbatchjpa.batch;
 
 import lombok.Getter;
 import lombok.ToString;

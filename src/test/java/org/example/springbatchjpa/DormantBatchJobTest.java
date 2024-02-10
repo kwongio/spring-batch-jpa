@@ -1,5 +1,10 @@
 package org.example.springbatchjpa;
 
+import org.example.springbatchjpa.batch.BatchStatus;
+import org.example.springbatchjpa.batch.JobExecution;
+import org.example.springbatchjpa.batch.TaskletJob;
+import org.example.springbatchjpa.customer.Customer;
+import org.example.springbatchjpa.customer.CustomerRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +25,7 @@ class DormantBatchJobTest {
     private CustomerRepository customerRepository;
 
     @Autowired
-    private DormantBatchJob dormantBatchJob;
+    private TaskletJob dormantBatchJob;
 
     @BeforeEach
     public void setup() {
@@ -105,6 +110,7 @@ class DormantBatchJobTest {
         assertThat(jobExecution.getStatus()).isEqualTo(BatchStatus.COMPLETED);;
 
     }
+
 
     private void saveCustomer(long loginMinusDays) {
         final String uuid = UUID.randomUUID().toString();

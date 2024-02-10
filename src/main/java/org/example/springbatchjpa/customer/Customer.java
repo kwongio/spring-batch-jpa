@@ -1,4 +1,4 @@
-package org.example.springbatchjpa;
+package org.example.springbatchjpa.customer;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -47,7 +47,8 @@ public class Customer {
     }
 
     public enum Status {
-        NORMAL, DORMANT;
+        NORMAL,
+        DORMANT;
     }
 
 }
